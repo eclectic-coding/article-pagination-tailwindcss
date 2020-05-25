@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+@response = Faraday.get 'https://jsonplaceholder.typicode.com/posts'
+post_data = JSON.parse(@response.body)
+
+post_data.each do |post|
+  Post.create!(
+    content: post['body'],
+    title: post['title']
+  )
+end
+
+
+# id
+# title
+# body

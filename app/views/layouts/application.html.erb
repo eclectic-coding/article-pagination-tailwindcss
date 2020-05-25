@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-full">
 <head>
   <title>ArticlePagination</title>
   <%= csrf_meta_tags %>
@@ -9,7 +9,10 @@
   <%= stylesheet_pack_tag 'stylesheets' %>
 </head>
 
-<body>
-<%= yield %>
+<body class="flex flex-col h-full">
+<main class="container mx-auto m-8 flex-1">
+  <%= yield %>
+</main>
+
 </body>
 </html>
