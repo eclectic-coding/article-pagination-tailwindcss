@@ -15,8 +15,3 @@ post_data.each do |post|
     title: post['title']
   )
 end
-
-
-# id
-# title
-# body
